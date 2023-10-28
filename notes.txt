@@ -1,0 +1,27 @@
+# The data is in the final_data_v4.csv
+
+
+# old code for getting the spread of each city alone
+# prev_value = 0
+# curr_value = 1500
+# for i in range(16):
+#     if(i == 0):
+#         pass
+#     else:
+#         prev_value = curr_value
+#         curr_value = curr_value + 1500
+#     plt.subplots(figsize=(10,10))
+#     # plt.xticks(rotation=90)
+#     plt.title('Price Distribution of Houses in Turkey')
+#     plt.xlabel('City')
+#     plt.ylabel('Price')
+#     sns.scatterplot(x=df['city'][prev_value:curr_value],y=df['fiyat'][prev_value:curr_value],data=df)
+
+# Modified Z-Score Method
+MAD = get_mad(df['fiyat'])
+median = filtered_data['fiyat'].median()
+# filtered_data['mod_z_score_fiyat'] = filtered_data['fiyat'].apply(lambda x: get_modified_z_score(x,median,MAD))
+# filtered_data[filtered_data['mod_z_score_fiyat']>3]
+
+
+# GOOGLE MAPS API: AIzaSyBvD4uepnIzTKCyA9mHwntObMRzAAdxnTs
